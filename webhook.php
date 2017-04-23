@@ -34,6 +34,6 @@ foreach ($msgs as $msg){
 	}
 	} 	else
 	if($message->attachments){
-		$bot->sendTextMessage($recipientId, "Attachment received"));
+		$bot->sendTextMessage($recipientId, "Attachment received");
 	}
 }
