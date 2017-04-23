@@ -1,9 +1,9 @@
 <?php
 require 'loader.php';
 require 'config.php';
-use System\Action_Handler;
-use System\FacebookBot;
-use System\AI;
+use system\Action_Handler;
+use system\FacebookBot;
+use system\AI;
 
 /**
 * init class
