@@ -101,7 +101,7 @@ class Crayner_Machine
  
  $self = explode('/',$_SERVER['PHP_SELF']);
  unset($self[count($self)-1]);
-  $eoc=Crayner_Machine::qurl('http'.(isset($_SERVER['HTTPS'])?'s':'').'://' $_SERVER['HTTP_HOST'].implode('/',$self).'/php/'.$file);
+  $eoc=Crayner_Machine::qurl('http'.(isset($_SERVER['HTTPS'])?'s':'').'://'.$_SERVER['HTTP_HOST'].implode('/',$self).'/php/'.$file);
         $st=microtime(true)-$st;
         $mt=memory_get_usage()-$mt;
         $a = array(
