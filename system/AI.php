@@ -1,7 +1,6 @@
 <?php 
 namespace system;
 date_default_timezone_set("Asia/Jakarta");
-define('data','data');
 /**
 * @author Ammar F. <ammarfaizi2@gmail.com> https://www.facebook.com/ammarfaizi2
 * @license RedAngel_PHP_Concept (c) 2017

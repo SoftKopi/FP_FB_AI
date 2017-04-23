@@ -1,6 +1,6 @@
 <?php
 namespace system;
-use system/Crayner_Machine;
+use system\Crayner_Machine;
 
 class Action_Handler
 {
