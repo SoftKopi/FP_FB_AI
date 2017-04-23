@@ -7,10 +7,7 @@ define('data','data');
 * @license RedAngel_PHP_Concept (c) 2017
 * @package Artificial Inteligence
 */
-function autoload($class){
-    include __DIR__.DIRECTORY_SEPARATOR.str_replace("\\",DIRECTORY_SEPARATOR,$class).".php";
-}
-spl_autoload_register('autoload');
+
 use tools\Google_Translate;
 use tools\JadwalSholat;
 use tools\Whois\Whois;
