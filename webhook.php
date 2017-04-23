@@ -23,7 +23,7 @@ $msgs = $bot->getReceivedMessages();
 foreach ($msgs as $msg){
 	$uid = $msg->senderId;
 	if($msg->text){
-		$st = $a->prepare($msg->text);
+		$st = $ai->prepare($msg->text);
 		if($st->execute($mg->get_name($uid))){
 		$rt = $st->fetch_reply();
 		if(is_array($rt)){
