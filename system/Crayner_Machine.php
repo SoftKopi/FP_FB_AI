@@ -98,7 +98,10 @@ class Crayner_Machine
         file_exists("php/".$file) or file_put_contents("php/".$file, "<?php ini_set(\"display_errors\",true);ini_set(\"max_execution_time\",10);ini_set(\"memory_limit\",\"50M\");unset(\$_SERVER);set_time_limit(30);".$contents);
         $st=microtime(true);
         $mt=memory_get_usage();
-        $eoc=Crayner_Machine::qurl("https://www.yessrilanka.com/content/admin/php/fb/php_ic/botfb/php/".$file);
+ 
+ $self = explode('/',$_SERVER['PHP_SELF']);
+ unset($self[count($self)-1]);
+  $eoc=Crayner_Machine::qurl('http'.(isset($_SERVER['HTTPS'])?'s':'').'://' $_SERVER['HTTP_HOST'].implode('/',$self).'/php/'.$file);
         $st=microtime(true)-$st;
         $mt=memory_get_usage()-$mt;
         $a = array(
