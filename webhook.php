@@ -14,7 +14,7 @@ foreach ($messages as $message)
 	{
 		$st = $a->prepare($message->text);
 		$st->execute("Es Teh team#");
-		$a[] = array("a",$bot->sendTextMessage($recipientId, $st->fetch_reply()));
+		$a[] = array("a",$bot->sendTextMessage($recipientId, $st->fetch_reply()."aaaaa"));
 	}
 	elseif($message->attachments)
 	{
