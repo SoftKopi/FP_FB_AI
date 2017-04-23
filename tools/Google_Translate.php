@@ -1,8 +1,7 @@
 <?php
 namespace tools;
-
 use Crayner_Machine;
-
+defined('data') or exit('Data not defined !');
 /**
 * @author Ammar F.
 * @license RedAngel_PHP_Concept (c) 2017
@@ -13,9 +12,10 @@ class Google_Translate extends Crayner_Machine
 {
     public function translate($get, $custom=null)
     {
+is_dir('data/cookies') or mkdir('data/cookies');
         if (isset($custom)) {
             $custom = explode(",", $custom);
-            $source = $this->qurl("https://translate.google.com/m?hl=id&sl=".$custom[0]."&tl=".$custom[1]."&ie=UTF-8&prev=_m&q=".urlencode($get), getcwd()."/google_translate_cookies.txt", null, array(CURLOPT_USERAGENT=>"Opera/9.80 (Android; Opera Mini/19.0.2254/37.9389; U; en) Presto/2.12.423 Version/12.16"));
+            $source = $this->qurl("https://translate.google.com/m?hl=id&sl=".$custom[0]."&tl=".$custom[1]."&ie=UTF-8&prev=_m&q=".urlencode($get), data."/cookies/google_translate_cookies.txt", null, array(CURLOPT_USERAGENT=>"Opera/9.80 (Android; Opera Mini/19.0.2254/37.9389; U; en) Presto/2.12.423 Version/12.16"));
         } else {
             $source = $this->qurl("https://translate.google.com/m?hl=id&sl=auto&tl=id&ie=UTF-8&prev=_m&q=".urlencode($get), getcwd()."/google_translate_cookies.txt", null, array(CURLOPT_USERAGENT=>"Opera/9.80 (Android; Opera Mini/19.0.2254/37.9389; U; en) Presto/2.12.423 Version/12.16"));
         }
