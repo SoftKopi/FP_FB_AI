@@ -1,5 +1,5 @@
 <?php
-namespace System;
+namespace system;
 class FacebookBot
 {
 	private $_validationToken;

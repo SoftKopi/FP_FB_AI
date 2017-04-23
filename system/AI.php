@@ -1,4 +1,5 @@
 <?php 
+namespace system;
 date_default_timezone_set("Asia/Jakarta");
 define('data','data');
 /**
