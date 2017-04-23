@@ -11,6 +11,7 @@ class Brainly extends Crayner_Machine
 {
     public function execute($query, $limit=1)
     {
+is_dir(data) or mkdir(data);
 is_dir(data.'/brainly/') or mkdir(data.'/brainly/');
 $p=null;
 $file = data."/brainly/brainly_".md5($query).".txt";

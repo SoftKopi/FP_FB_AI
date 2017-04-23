@@ -13,8 +13,8 @@ foreach ($messages as $message)
 	if($message->text)
 	{
 		$st = $a->prepare($message->text);
-		$st->execute("Es Teh team#");
-		$a[] = array("a",$bot->sendTextMessage($recipientId, $st->fetch_reply()."aaaaa"));
+		$st->execute("Esa Teh team#");
+		$a[] = array("a",$bot->sendTextMessage($recipientId, $st->fetch_reply()));
 	}
 	elseif($message->attachments)
 	{
