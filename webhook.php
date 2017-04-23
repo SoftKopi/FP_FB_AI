@@ -22,8 +22,8 @@ $msgs = $bot->getReceivedMessages();
 
 foreach ($msgs as $msg){
 	$uid = $msg->senderId;
-	if($message->text){
-		$st = $a->prepare($message->text);
+	if($msg->text){
+		$st = $a->prepare($msg->text);
 		if($st->execute($mg->get_name($uid))){
 		$rt = $st->fetch_reply();
 		if(is_array($rt)){
@@ -33,7 +33,7 @@ foreach ($msgs as $msg){
 		}
 	}
 	} 	else
-	if($message->attachments){
+	if($msg->attachments){
 		$bot->sendTextMessage($recipientId, "Attachment received");
 	}
 }
