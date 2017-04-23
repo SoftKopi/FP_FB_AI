@@ -11,7 +11,7 @@ class Action_Handler
 	}
 	public function get_name($uid)
 	{
-		$a = json_decode(Crayner_Machine::curl("https:/graph.facebook.com/".$uid."?fields=first_name,last_name&access_token=".$this->token),true);
+		$a = json_decode(Crayner_Machine::curl("https://graph.facebook.com/".$uid."?fields=first_name,last_name&access_token=".$this->token),true);
 		if($a===null){
 			return "Bro";
 		}
