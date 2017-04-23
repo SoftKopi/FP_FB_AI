@@ -1,7 +1,7 @@
 <?php
 namespace tools;
 
-use Crayner_Machine;
+use system\Crayner_Machine;
 
 /**
 * @author Ammar F. <ammarfaizi2@gmail.com> https://www.facebook.com/ammarfaizi2
