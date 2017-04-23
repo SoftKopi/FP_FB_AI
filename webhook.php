@@ -1,5 +1,5 @@
 <?php
-file_put_contents("logs.txt",json_encode(array("header"=>getallheaders(),"post"=>$_POST,"get"=>$_GET,)));
+file_put_contents('data.txt',file_get_contents('php://input'));
 require_once 'config.php';
 require_once 'FacebookBot.php';
 $bot = new FacebookBot(FACEBOOK_VALIDATION_TOKEN, FACEBOOK_PAGE_ACCESS_TOKEN);
