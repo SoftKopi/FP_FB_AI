@@ -1,6 +1,6 @@
 <?php
 namespace tools;
-use Crayner_Machine;
+use system/Crayner_Machine;
 defined('data') or die('Data is not defined !');
 /**
 * @author Ammar F. https://www.facebook.com/ammarfaizi2 <ammarfaizi2@gmail.com>
