@@ -854,10 +854,9 @@ foreach($sholat as $z){
         return isset($msg) ? $msg : false;
     }
 private function sm($actor){
-$a = json_decode(Crayner_Machine::curl("https://www.yessrilanka.com/simisimi.php?msg=".urlencode($this->msg)),true);
-file_put_contents("a.txt",json_encode($a));
-if(isset($a['respSentence'])){
-	if(strpos($a['respSentence'],"Saya belum paham")!==false){
+$a = json_decode(Crayner_Machine::curl("https://instakuy.net/simsimi.php?kata=".urlencode($this->msg)),true);
+if(isset($a['pesan'])){
+	if(strpos($a['pesan'],"Saya belum paham")!==false){
 	 $this->absmsg=false;
   $this->msg=null;
   $this->msgrt=null;
@@ -867,7 +866,7 @@ if(isset($a['respSentence'])){
 		$x = array("simi");
 		$b = array("carik");
 		$this->msg=null;
-  $this->msgrt=str_ireplace($x,$b,urldecode($a['respSentence']));
+  $this->msgrt=str_ireplace($x,$b,urldecode($a['pesan']));
   $this->actor=$actor;$this->absmsg=false;
 		return true;
 	}   	
