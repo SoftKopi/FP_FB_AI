@@ -44,7 +44,8 @@ class FacebookBot
 		if($response)
 		{
 			$responseObject = json_decode($response);
-			return is_object($responseObject) && isset($responseObject->recipient_id) && isset($responseObject->message_id);
+			file_put_contents("errlg.md",$response);
+			return	$response; is_object($responseObject) && isset($responseObject->recipient_id) && isset($responseObject->message_id);
 		}
 		return $response;
 	}
