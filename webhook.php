@@ -1,4 +1,5 @@
 <?php
+file_put_contents('input.md',file_get_contents("php://input"));
 require 'loader.php';
 require 'config.php';
 use system\Action_Handler;
