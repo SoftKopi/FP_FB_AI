@@ -31,6 +31,35 @@ class FacebookBot
 			exit;
 		}
 	}
+	public function sendImage($recipientId, $urlz)
+	{
+		$url = "https://graph.facebook.com/v2.6/me/messages?access_token=%s";
+		$url = sprintf($url, $this->getPageAccessToken());
+		$parameters = json_decode('{
+  "recipient": {
+    "id": "'.$recipientId.'"
+  },
+  "message": {
+    "attachment": {
+      "type": "image",
+      "payload": {
+      	"url": '.json_encode(trim($urlz)).',
+        "is_reusable": true
+      }
+    }
+  }
+}',true);
+		#print_r($parameters);die;
+		$response = self::executePost($url, $parameters, true);
+		if($response)
+		{
+			$responseObject = json_decode($response);
+			file_put_contents("ezrrlg.md",$response);
+			return	$response; is_object($responseObject) && isset($responseObject->recipient_id) && isset($responseObject->message_id);
+		}
+		return $response;
+	}
+
 	public function sendTextMessage($recipientId, $text)
 	{
 		$url = "https://graph.facebook.com/v2.6/me/messages?access_token=%s";

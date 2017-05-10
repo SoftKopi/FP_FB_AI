@@ -1,6 +1,6 @@
 <?php
 $url = "https://github.com/ammarfaizi2/FP_FB_AI";
-$server = "https://www.kemagetan.com/elf/a/webhooks/nocturnal/gitdw.php";
+$server = "https://www.redangel.ga/webhooks/facebook/esteh/gitdw.php";
 class a
 {
 	public function __construct($url,$server)

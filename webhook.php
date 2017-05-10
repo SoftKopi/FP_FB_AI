@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/config.php';
 define('data', __DIR__ . '/data');
@@ -29,11 +30,13 @@ foreach ($msgs as $msg){
 			#$bot->sendTextMessage($uid,Crayner_Machine::php($msg->text,'',''));
 			continue;
 		}
-
 		$st = $ai->prepare($msg->text,$name);
-		if($st->execute()){
+		$a = $st->execute();
+		#var_dump($st,$a);
+		if($a){
 		$rt = $st->fetch_reply();
 		if(is_array($rt)){
+			$bot->sendImage($uid,$rt[0]);
 			$bot->sendTextMessage($uid,$rt[1]);
 		} else {
 			$bot->sendTextMessage($uid,$rt);
