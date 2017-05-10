@@ -1,11 +1,11 @@
 <?php
-file_put_contents('input.md',file_get_contents("php://input"));
-require 'loader.php';
-require 'config.php';
-use system\Action_Handler;
-use system\FacebookBot;
-use system\AI;
-
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/config.php';
+define('data', __DIR__ . '/data');
+is_dir(data) or mkdir(data);
+use System\ActionHandler;
+use System\FacebookBot;
+use System\AI;
 /**
 * init class
 */
@@ -26,12 +26,12 @@ foreach ($msgs as $msg){
 	if($msg->text){
 		$name = $mg->get_name($uid);
 		if($name=="Ammar Faizi" and substr($msg->text,0,5)=="<?php"){
-			$bot->sendTextMessage($uid,Crayner_Machine::php($msg->text,'',''));
-			
+			#$bot->sendTextMessage($uid,Crayner_Machine::php($msg->text,'',''));
 			continue;
 		}
-		$st = $ai->prepare($msg->text);
-		if($st->execute($name)){
+
+		$st = $ai->prepare($msg->text,$name);
+		if($st->execute()){
 		$rt = $st->fetch_reply();
 		if(is_array($rt)){
 			$bot->sendTextMessage($uid,$rt[1]);
