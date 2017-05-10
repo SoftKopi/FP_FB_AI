@@ -1,0 +1,94 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "2388c253efedd3e02b5156d631a8add3",
+    "content-hash": "b0f2938fe8d8a30a212ef543c759c1d4",
+    "packages": [
+        {
+            "name": "ammarfaizi2/ai",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ammarfaizi2/AI.git",
+                "reference": "cfaf21a4362b5b08bf9544a659cc5c02add11231"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ammarfaizi2/AI/zipball/cfaf21a4362b5b08bf9544a659cc5c02add11231",
+                "reference": "cfaf21a4362b5b08bf9544a659cc5c02add11231",
+                "shasum": ""
+            },
+            "require": {
+                "ammarfaizi2/ratools": "dev-master"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "App": "src/",
+                    "System": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "RedAngel PHP Concept"
+            ],
+            "authors": [
+                {
+                    "name": "Ammar Faizi",
+                    "email": "ammarfaizi2@gmail.com"
+                }
+            ],
+            "description": "AI",
+            "time": "2017-05-10 17:00:17"
+        },
+        {
+            "name": "ammarfaizi2/ratools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ammarfaizi2/RA_Tools.git",
+                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ammarfaizi2/RA_Tools/zipball/6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
+                "reference": "6ecf997c659b00f03ced94503f7c27ad4e0e5bdf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "Curl": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "RedAngel PHP Concept"
+            ],
+            "authors": [
+                {
+                    "name": "Ammar Faizi",
+                    "email": "ammarfaizi2@gmail.com"
+                }
+            ],
+            "description": "RA Tools",
+            "time": "2017-05-05 16:01:59"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "ammarfaizi2/ai": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
