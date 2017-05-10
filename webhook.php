@@ -10,7 +10,7 @@ use System\AI;
 * init class
 */
 $ai		= new AI();
-$mg		= new Action_Handler(FACEBOOK_PAGE_ACCESS_TOKEN);
+$mg		= new ActionHandler(FACEBOOK_PAGE_ACCESS_TOKEN);
 $bot	= new FacebookBot(FACEBOOK_VALIDATION_TOKEN, FACEBOOK_PAGE_ACCESS_TOKEN);
 
 
